@@ -1,0 +1,5 @@
+.bookmarks-wrap{
+  flex: 1;
+  height: 100%;
+  overflow: scroll;
+}

@@ -2,15 +2,15 @@
  * @Author: 六弦(melodyWxy)
  * @Date: 2022-06-06 15:21:55
  * @LastEditors: 六弦(melodyWxy)
- * @LastEditTime: 2022-06-07 17:18:08
- * @FilePath: /hooks-app/src/client/components/UserIcon/index.tsx
+ * @LastEditTime: 2022-06-10 10:46:26
+ * @FilePath: /bui-local/Users/wxy/codeWorks/sp-pub/gg-plugin-server/hooks-app/src/client/components/UserIcon/index.tsx
  * @Description: update here
  */
 
 import React, { FC } from 'react'
-import { Dropdown, Menu, Button, Avatar } from 'antd';
+import { Dropdown, Menu, Button, Avatar, message } from 'antd';
 import { observer } from 'mobx-react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { UserOutlined, SettingOutlined, LogoutOutlined } from '@ant-design/icons';
 import userStore from './../../store/user';
 import { useLogin } from './effect';
@@ -24,9 +24,10 @@ import styles from './index.module.css';
 export const UserIcon: FC<UserIconProps> = ({store = {}}) => {
   const { userinfo, isLogin } = store;
   useLogin(isLogin);
-  if(isLogin || !userinfo) {
+  if(!isLogin || !userinfo) {
     return (
-      <Link to={"/login"}>登录</Link>
+      // <Link to={"/login"}>登录</Link>
+      <a onClick={()=>message.warn('暂未接入登录功能')}>登录</a>
     )
   }
   const {
