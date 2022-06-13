@@ -2,14 +2,14 @@
  * @Author: 六弦(melodyWxy)
  * @Date: 2022-05-28 16:07:55
  * @LastEditors: 六弦(melodyWxy)
- * @LastEditTime: 2022-06-13 10:44:24
+ * @LastEditTime: 2022-06-13 11:26:57
  * @FilePath: /bui-local/Users/wxy/codeWorks/sp-pub/gg-plugin-server/hooks-app/src/client/pages/Bookmarks/index.tsx
  * @Description: update here
  */
 import { ProFormRadio, ProList } from '@ant-design/pro-components';
 import React, { FC } from 'react';
 import { observer } from 'mobx-react';
-import CATALOGUE_LIST from '../../../enumData/catalogue'
+import CATALOGUE_LIST from '../../../api/enumData/catalogue'
 import { useBookMarkList } from './effect';
 import catalogueStore from './../../store/catalogue';
 import type { BookmarksProps } from './type'

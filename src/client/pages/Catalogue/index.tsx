@@ -2,7 +2,7 @@
  * @Author: 六弦(melodyWxy)
  * @Date: 2022-05-28 22:02:33
  * @LastEditors: 六弦(melodyWxy)
- * @LastEditTime: 2022-06-13 09:56:50
+ * @LastEditTime: 2022-06-13 11:27:25
  * @FilePath: /bui-local/Users/wxy/codeWorks/sp-pub/gg-plugin-server/hooks-app/src/client/pages/Catalogue/index.tsx
  * @Description: update here
  */
@@ -15,7 +15,7 @@ import {
 } from '@ant-design/icons';
 import { observer } from 'mobx-react';
 
-import CATALOGUE_LIST from '../../../enumData/catalogue'
+import CATALOGUE_LIST from '../../../api/enumData/catalogue'
 import { useSelectedKeys } from './effect'
 import catalogueStore from './../../store/catalogue';
 import { Outlet, useNavigate } from 'react-router-dom'

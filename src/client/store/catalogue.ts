@@ -2,12 +2,12 @@
  * @Author: 六弦(melodyWxy)
  * @Date: 2022-06-10 16:04:43
  * @LastEditors: 六弦(melodyWxy)
- * @LastEditTime: 2022-06-13 10:36:26
+ * @LastEditTime: 2022-06-13 11:27:31
  * @FilePath: /bui-local/Users/wxy/codeWorks/sp-pub/gg-plugin-server/hooks-app/src/client/store/catalogue.ts
  * @Description: update here
  */
 import { makeAutoObservable } from "mobx"
-import CATALOGUE_LIST from '../../enumData/catalogue';
+import CATALOGUE_LIST from '../../api/enumData/catalogue';
 import { getBookmarkDataSource } from './../../api/catalogue'
 
 
