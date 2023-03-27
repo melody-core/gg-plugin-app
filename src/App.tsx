@@ -40,7 +40,7 @@ const App = () => {
       <Footer
         className={styles['footer-wrap']}
       >
-        办公神器-谷歌助手-后台@2022
+        米二哈谷歌助手-后台@2022
       </Footer>
     </Layout>
   );

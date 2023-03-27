@@ -8,9 +8,23 @@
  */
 
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 
 export const useBookMarkList = (getTableData) => {
-  useEffect(getTableData,[])
+  useEffect(getTableData, [])
+}
+
+export const useFormContrulor = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [initValues, setInitValues] = useState<Record<string, any>>();
+  const formContrulor = (isShow?: boolean, value?: Record<string, any>)=> {    
+    setInitValues(value);
+    setShowForm(isShow || false);
+  }
+  return {
+    showForm,
+    formContrulor,
+    initValues
+  }
 }

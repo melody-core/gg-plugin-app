@@ -27,7 +27,7 @@ export const UserIcon: FC<UserIconProps> = ({store = {}}) => {
   if(!isLogin || !userinfo) {
     return (
       // <Link to={"/login"}>登录</Link>
-      <a onClick={()=>message.warn('暂未接入登录功能')}>登录</a>
+      <a onClick={()=>message.warn('暂未接入登录功能')}>六弦</a>
     )
   }
   const {
