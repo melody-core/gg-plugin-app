@@ -3,35 +3,11 @@ import { PrismaClient, Prisma } from '@prisma/client';
 const prisma = new PrismaClient();
 
 const cataloguedata: Prisma.CatalogueCreateInput[] = [{
-  label: '钱江dev',
+  label: '百度',
   belong: 'BOOK_MARK_0-0-1',
-  link: 'http://dev.eimos.com/pro/portal/home',
+  link: 'https://www.baidu.com',
   roles: '*',
-  desc: '钱江用户-dev环境-办公系统'
-},{
-  label: '钱江uat',
-  belong: 'BOOK_MARK_0-0-1',
-  roles: '*',
-  link: 'http://uat.eimos.com/pro/portal/home',
-  desc: '钱江用户-dev环境-办公系统'
-},{
-  label: '钱江线上',
-  belong: 'BOOK_MARK_0-0-1',
-  roles: '*',
-  link: 'http://eimos.qre.cn/',
-  desc: '钱江用户-dev环境-办公系统'
-},{
-  label: '雪蕾dev',
-  belong: 'BOOK_MARK_0-0-1',
-  roles: '*',
-  link: 'http://dev.xuelei.com/pro/portal/home',
-  desc: '钱江用户-dev环境-办公系统'
-},{
-  label: '雪蕾uat',
-  belong: 'BOOK_MARK_0-0-1',
-  roles: '*',
-  link: 'http://uat.xuelei.com/pro/portal/home',
-  desc: '钱江用户-dev环境-办公系统'
+  desc: '百度啊'
 }];
 
 async function main() {

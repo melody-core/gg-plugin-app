@@ -1,10 +1,11 @@
 {
-  "name": "hooks-react-starter",
+  "name": "sp-gg-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "hooks start",
     "dev": "hooks dev",
+    "dev:server": "hooks start",
     "build": "hooks build"
   },
   "dependencies": {

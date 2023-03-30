@@ -6,24 +6,22 @@
  * @FilePath: /bui-local/Users/wxy/codeWorks/sp-pub/gg-plugin-server/hooks-app/src/client/store/catalogue.ts
  * @Description: update here
  */
-import { makeAutoObservable } from "mobx"
-import CATALOGUE_LIST from '../../api/enumData/catalogue';
-import { getBookmarkDataSource } from './../../api/catalogue'
+import { makeAutoObservable } from "mobx";
+import CATALOGUE_LIST from "../../api/enumData/catalogue";
+import { getBookmarkDataSource } from "./../../api/catalogue";
 
-
-const getURLParams:() => string = () => {
+const getURLParams: () => string = () => {
   const searchParams = new window.URLSearchParams(location.search);
-  let res
-  searchParams.forEach((v, k)=>{
-    if(k === 'key') {
+  let res;
+  searchParams.forEach((v, k) => {
+    if (k === "key") {
       res = v;
     }
-  })
+  });
   return res || CATALOGUE_LIST[0].children[0].key;
-}
+};
 
-
-export class CatalogueStoreConstructor{
+export class CatalogueStoreConstructor {
   bookmarks = {
     selectedKeys: [getURLParams()],
     bookmarkList: [],
@@ -31,29 +29,28 @@ export class CatalogueStoreConstructor{
   setSelectedKeys = (key) => {
     this.bookmarks = {
       ...this.bookmarks,
-      selectedKeys: [key]
-    }
+      selectedKeys: [key],
+    };
     this.updateBookmarkList({
-      belong: key
-    })
-  }
+      belong: key,
+    });
+  };
   updateBookmarkList = (params?: Record<any, any>) => {
     getBookmarkDataSource({
       query: {
         belong: this.bookmarks.selectedKeys[0],
-        ...(params || {})
-      }
-    })
-      .then((res: Record<any, any>) => {
-        const { data = [] } = res || {};
-        this.bookmarks = {
-          ...this.bookmarks,
-          bookmarkList: data
-        }
-      })
-  }
-  constructor(){
-    makeAutoObservable(this)
+        ...(params || {}),
+      },
+    }).then((res: Record<any, any>) => {
+      const { data = [] } = res || {};
+      this.bookmarks = {
+        ...this.bookmarks,
+        bookmarkList: data,
+      };
+    });
+  };
+  constructor() {
+    makeAutoObservable(this);
   }
 }
 
