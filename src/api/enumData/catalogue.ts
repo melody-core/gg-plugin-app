@@ -1,3 +1,11 @@
+/*
+ * @Author: xinyu_wang06 xinyu.wang06@mihoyo.com
+ * @Date: 2023-03-24 18:33:08
+ * @LastEditors: xinyu_wang06 xinyu.wang06@mihoyo.com
+ * @LastEditTime: 2023-03-30 14:01:29
+ * @FilePath: \mihoyo-infosys-design-axuree:\gitlab\wlb\gg-plugin-app\src\api\enumData\catalogue.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 
 
 export default [{
@@ -46,4 +54,13 @@ export default [{
     "configurable": -1
   },
   "key": "CHANGE_VERSION"  
+}, {
+  "title": "页面性能检测",
+  "label": "页面性能检测",
+  "type": "form-modal",
+  "options": {
+    "config": "PAGE_PERFORMANCE",
+    "configurable": -1
+  },
+  "key": "PAGE_PERFORMANCE"  
 }]

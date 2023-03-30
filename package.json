@@ -5,6 +5,7 @@
   "scripts": {
     "start": "hooks start",
     "dev": "hooks dev",
+    "dev:server": "hooks start",
     "build": "hooks build"
   },
   "dependencies": {
